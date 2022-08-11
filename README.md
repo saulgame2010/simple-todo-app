@@ -4,7 +4,7 @@ This is a very simple todo app using javascript with webpack
 
 ## Notes
 
-Recuerden reconstruir los módulos de Node con:
+Remember to rebuild the node modules with:
 
 ```bash
 
