@@ -1,6 +1,6 @@
 # Cascarón para aplicación con webpack
 
-Esta es una aplicación que usa webpack y ya tiene configuraciones básicas
+This is a very simple todo app using javascript with webpack
 
 ## Notas
 
