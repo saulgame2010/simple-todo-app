@@ -1,8 +1,8 @@
-# Cascarón para aplicación con webpack
+# TODO app with javascript and webpack
 
 This is a very simple todo app using javascript with webpack
 
-## Notas
+## Notes
 
 Recuerden reconstruir los módulos de Node con:
 
