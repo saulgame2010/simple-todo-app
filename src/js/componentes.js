@@ -25,10 +25,23 @@ export const crearTodoHtml = (todo) => {
 // Eventos
 txtInput.addEventListener('keyup', (e) => {
     if(e.keyCode === 13 && txtInput.value.length > 0) {
-        console.log(txtInput.value);
         const nuevoTodo = new Todo(txtInput.value);
         todoList.nuevoTodo(nuevoTodo);
         crearTodoHtml(nuevoTodo);
         txtInput.value = '';
+    }
+});
+
+divTodoList.addEventListener('click', (e) => {
+    const elemento = e.target.localName; // input | label | button
+    const todoElemento = e.target.parentElement.parentElement;
+    const todoId = todoElemento.getAttribute('data-id');
+    if(elemento.includes('input')) { //Aquí verificamos si hizo click en el check
+        todoList.marcarCompletado(todoId);
+        todoElemento.classList.toggle('completed');
+    }
+    else if(elemento.includes('button')) { // Aquí verificamos que se hizo click en el botón
+        todoList.eliminarTodo(todoId);
+        divTodoList.removeChild(todoElemento);
     }
 });
